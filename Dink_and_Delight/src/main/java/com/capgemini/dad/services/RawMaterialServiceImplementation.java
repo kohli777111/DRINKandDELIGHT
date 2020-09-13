@@ -9,6 +9,7 @@ import com.capgemini.dad.dao.IRawMaterialOrderDao;
 import com.capgemini.dad.entity.ProductOrder;
 import com.capgemini.dad.entity.RawMaterialOrder;
 import com.capgemini.dad.exceptions.ProductNotFoundException;
+import com.capgemini.dad.exceptions.RawMaterialNotFoundException;
 
 public class RawMaterialServiceImplementation implements IRawMaterialService{
 
@@ -26,7 +27,7 @@ public class RawMaterialServiceImplementation implements IRawMaterialService{
 			return rawMaterialOrder;
 		}
 		// TODO Auto-generated method stub
-		throw  new ProductNotFoundException("No such order exists");
+		throw  new RawMaterialNotFoundException("No such order exists");
 	}
 
 	@Override
