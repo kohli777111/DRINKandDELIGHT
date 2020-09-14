@@ -38,5 +38,14 @@ public class ProductOrderServiceImplementation implements IProductOrderService{
 	
 	}
 
+	@Override
+	public String updateStatus(ProductOrder productOrder) {
+		// TODO Auto-generated method stub
+		
+		productOrder=pdao.save(productOrder);
+		
+		return "update successfully";
+	}
+
 	
 }
