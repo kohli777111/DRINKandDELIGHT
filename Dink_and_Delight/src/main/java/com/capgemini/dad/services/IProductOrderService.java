@@ -7,5 +7,7 @@ public interface IProductOrderService {
 	ProductOrder findById(Long orderId);
 	
 	ProductOrder save(ProductOrder productOrder);
+	
+	String updateStatus(ProductOrder productOrder);
 
 }
