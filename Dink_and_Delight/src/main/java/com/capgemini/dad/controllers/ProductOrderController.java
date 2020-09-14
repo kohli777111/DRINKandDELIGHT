@@ -1,9 +1,13 @@
 package com.capgemini.dad.controllers;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -45,5 +49,20 @@ public class ProductOrderController {
 		
 		
 	}
+	
+	
+	@PutMapping("/{orderId}/changeStatus")
+	public ResponseEntity<String> updateDeliveryStatus(@RequestBody Map<Long,String> request ,@PathVariable("orderId") Long orderId)
+	{
+		System.out.println(orderId);
+		ProductOrder productOrder=productOrderService.findById(orderId);
+		String status=request.get("deliveryStatus");
+		productOrder.setDeliveryStatus(status);
+		String msg=productOrderService.updateStatus(productOrder);
+		ResponseEntity<String> responseEntity=new ResponseEntity<String>(msg,HttpStatus.OK);
+		return responseEntity;
+		
+	}
+	
 
 }
