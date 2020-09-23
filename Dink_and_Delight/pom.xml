@@ -11,7 +11,7 @@
 	<groupId>com.capgemini</groupId>
 	<artifactId>Drink_and_Delight</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Dink_and_Delight</name>
+	<name>Drink_and_Delight</name>
 	<description>Drink and Delight</description>
 
 	<properties>
