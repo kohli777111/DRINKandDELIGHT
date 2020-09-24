@@ -11,13 +11,13 @@ import javax.persistence.Table;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
-@Entity
+@Entity(name="RawMaterialOrder")
 @Table(name="RawMaterialOrder")
 public class RawMaterialOrder {
 
 	@Id
 	@Column(name="orderId")
-	private long rmorderId;
+	private Long rmorderId;
 	
 	@Column(name="name", nullable=false)
 	private String rmName;

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+@Entity(name="ProductOrder")
 @Table(name="ProductOrder")	
 public class ProductOrder {
 	
@@ -30,8 +30,10 @@ public class ProductOrder {
 	private Double totalPrice;
 	@Column(length=6)
 	private Long warehouseId;
+	
 	@Column(length=15)
 	private String deliveryStatus;
+	
 	@Column(length=8)
 	private String quantityUnit;
 	public Long getOrderId() {
