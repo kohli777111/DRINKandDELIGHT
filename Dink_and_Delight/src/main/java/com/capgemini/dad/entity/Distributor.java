@@ -55,6 +55,13 @@ public class Distributor {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+
+	@Override
+	public String toString() {
+		return "Distributor [distributorId=" + distributorId + ", distributorName=" + distributorName + ", address="
+				+ address + ", phoneNumber=" + phoneNumber + "]";
+	}
+	
 	
 	
 }

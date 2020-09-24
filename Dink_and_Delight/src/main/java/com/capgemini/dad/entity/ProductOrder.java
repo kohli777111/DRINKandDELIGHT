@@ -16,13 +16,13 @@ public class ProductOrder {
 	private Long orderId;
 	@Column(length=15)
 	private String name;
-	@Column(length=6)
+	@Column(length=6, name="distributorId")
 	private Long distributorId;
 	@Column(length=8)
 	private Double quantityValue;
 	@Column(length=20)
 	private Date dateOfOrder;
-	@Column(length=20)
+	@Column(length=20 ,name="delDate")
 	private Date dateOfDelivery;
 	@Column(length=8)
 	private Double pricePerUnit;
@@ -31,7 +31,7 @@ public class ProductOrder {
 	@Column(length=6)
 	private Long warehouseId;
 	
-	@Column(length=15)
+	@Column(length=15,name="status")
 	private String deliveryStatus;
 	
 	@Column(length=8)

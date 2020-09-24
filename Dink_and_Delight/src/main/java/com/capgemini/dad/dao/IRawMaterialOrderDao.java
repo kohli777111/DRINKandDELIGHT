@@ -12,7 +12,7 @@ import com.capgemini.dad.entity.RawMaterialOrder;
 @Repository
 public interface IRawMaterialOrderDao extends JpaRepository<RawMaterialOrder, Long>{
 	
-	//@Query("select rm from RawMaterialOrder rm where supplierId=?1 and deliveryStatus=?2 or")
-	//public List<RawMaterialOrder> getRawMaterialOrder(String supplierId,String deliveryStatus,LocalDate startDate,LocalDate endDate)
+	@Query(value="SELECT rm from RawMaterialOrder rm where rm.supplierId=?1 and rm.status=?2 and rm.delDate>=?3 and rm.delDate=?4 ",nativeQuery = true)
+	public List<RawMaterialOrder> getRawMaterialOrder(Long supplierId,String deliveryStatus,LocalDate startDate,LocalDate endDate);
 
 }

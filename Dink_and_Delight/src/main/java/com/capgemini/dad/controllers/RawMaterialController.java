@@ -34,6 +34,7 @@ public class RawMaterialController {
 		rawMaterialOrder.setRmorderId(rawMaterialDetails.getRmorderId());
 		rawMaterialOrder.setRmName(rawMaterialDetails.getRmName());
 		rawMaterialOrder.setSupplierId(rawMaterialDetails.getSupplierId());
+		System.out.println("raw material Quantity -->>"+rawMaterialDetails.getQuantityUnit());
 		rawMaterialOrder.setQuantityValue(rawMaterialDetails.getQuantityValue());
 		rawMaterialOrder.setQuantityUnit(rawMaterialDetails.getQuantityUnit());
 		rawMaterialOrder.setDateOfOrder(rawMaterialDetails.getDateOfOrder());
@@ -42,6 +43,7 @@ public class RawMaterialController {
 		rawMaterialOrder.setPricePerUnit(rawMaterialDetails.getPricePerUnit());
 	    rawMaterialOrder.setDeliveryStatus(rawMaterialDetails.getDeliveryStatus());
 		rawMaterialOrder.setWarehouseID(rawMaterialDetails.getWarehouseID());
+		rawMaterialOrder.setPricePerUnit(rawMaterialDetails.getPricePerUnit());
 		
 		
 		rawMaterialOrder=rawMaterialService.save(rawMaterialOrder);

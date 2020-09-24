@@ -8,5 +8,6 @@ import com.capgemini.dad.entity.Supplier;
 
 @Repository
 public interface ISupplierDao extends JpaRepository<Supplier, Long> {
+	
 
 }
